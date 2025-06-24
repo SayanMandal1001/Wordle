@@ -1,0 +1,57 @@
+body{
+    background-color: black;
+}
+h1{
+    color: white;
+    font-size: 70px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+table{
+    background-color: black;
+}
+td{
+    width: 60px;
+    height: 60px;
+    background-color: black;
+    border-style: none;
+    padding: 3px;
+}
+.displayText{
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    border-style: solid;
+    font-size: 40px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: black;
+    color: white;
+    border-color: rgb(122, 122, 122);
+    border-width: 3px;
+}
+
+#input{
+    width:150px;
+    border-style: solid;
+    border-radius: 2px;
+    border-color:  rgb(122, 122, 122);
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    position: relative;
+    left: -5px;
+}
+
+#enter{
+    width: 50px;
+    height: 25px;
+    position: relative;
+    left: 15px;
+    background-color: rgb(53, 53, 53);
+    color: white;
+    border-style: solid;
+    border-color: aliceblue;
+    border-radius: 3px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+}
