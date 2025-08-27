@@ -23203,6 +23203,8 @@ function checkWord(){
         return ;
     }
     var checked = [false, false, false, false, false];
+    var correctPosition = [false, false, false, false, false];
+
 
     var lastLetter = document.getElementById((tryNumber*10 + 5).toString());
     if(lastLetter.value=='') return ;
@@ -23213,14 +23215,24 @@ function checkWord(){
         var letter = document.getElementById(letterPosition.toString());
         for(var j=0; j<5; j++){
             if(letter.value==wordToday[j] && checked[j] == false){
-                checked[j] = true;
                 if(i==j){
+                    checked[j] = true;
+                    correctPosition[j] = true;
                     result = 2;
                     break;
                 }
-                result = 1;
             }
         }
+        if(result==0){
+            for(var j=0; j<5; j++){
+                if(letter.value==wordToday[j] && checked[j] == false && correctPosition[j] == false){
+                    checked[j] = true;
+                    result = 1;
+                }
+            }
+        }
+
+
         if(result==0){
             letter.style.backgroundColor = "grey";
             letter.style.borderColor = "grey";
