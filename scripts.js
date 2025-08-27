@@ -1,7 +1,3 @@
-var tryNumber=1;
-var maxWord = '';
-var wonMatch = false;
-
 var words = [
   "aahed",
   "aalii",
@@ -23153,12 +23149,15 @@ var words = [
   "zymin"
 ]
 
+var tryNumber=1;
+var maxWord = '';
+var wonMatch = false;
 
 const max = words.length;
 const randomInt = Math.floor(Math.random() * max);
 
 var wordToday=words[randomInt].toUpperCase();
-//console.log(wordToday);
+console.log(wordToday);
 
 function getInput() {
     var input = document.getElementById("input");
@@ -23203,6 +23202,7 @@ function checkWord(){
         input.focus();
         return ;
     }
+    var checked = [false, false, false, false, false];
 
     var lastLetter = document.getElementById((tryNumber*10 + 5).toString());
     if(lastLetter.value=='') return ;
@@ -23212,7 +23212,8 @@ function checkWord(){
         var letterPosition = tryNumber*10 + i + 1;
         var letter = document.getElementById(letterPosition.toString());
         for(var j=0; j<5; j++){
-            if(letter.value==wordToday[j]){
+            if(letter.value==wordToday[j] && checked[j] == false){
+                checked[j] = true;
                 if(i==j){
                     result = 2;
                     break;
