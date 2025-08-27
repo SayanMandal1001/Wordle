@@ -23158,7 +23158,7 @@ const max = words.length;
 const randomInt = Math.floor(Math.random() * max);
 
 var wordToday=words[randomInt].toUpperCase();
-console.log(wordToday);
+//console.log(wordToday);
 
 function getInput() {
     var input = document.getElementById("input");
